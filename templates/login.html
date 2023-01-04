@@ -1,0 +1,44 @@
+{% extends 'index.html' %}
+
+{% block title %} Login | {% endblock %}
+
+{% block content %}
+
+<div class="mt-6 flex flex-col items-center justify-center px-6 py-8 mx-auto">
+    <div class="w-full bg-[#171c2d] max-w-md p-8 rounded-lg">
+        
+        <h1 class="text-lg text-center font-bold text-white">
+            Login Page
+        </h1>
+    
+        <form class="space-y-4" method="POST">
+            {% csrf_token %}
+
+            <div>
+                <label class="text-sm text-white mb-2">Your E-mail</label>
+                <input type="email" name="email" placeholder="Email Address"
+                class="rounded-lg block w-full bg-gray-700 p-2 text-white"/>
+            </div>
+
+            <div>
+                <label class="text-sm text-white mb-2">Your Password</label>
+                <input type="password" name="password" placeholder="Password"
+                class="rounded-lg block w-full bg-gray-700 p-2 text-white"/>
+            </div>
+
+            <div class="text-center">
+                <button type="submit" class="p-3 text-center text-[#171c2d] rounded-lg bg-[#f9982f]">
+                    Log In
+                </button>
+            </div>
+
+            <p class="text-sm font-light text-white">
+                Dont have an account?
+                <a href="{% url 'register_page' %}" class="text-white hover:text-[#eab56f]">Register here</a>
+            </p>
+
+        </form>
+    </div>
+</div>
+
+{% endblock %}

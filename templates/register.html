@@ -1,0 +1,39 @@
+{% extends 'index.html' %}
+
+{% block title %} Register | {% endblock %}
+
+{% block content %}
+
+<div class="mt-6 flex flex-col items-center justify-center px-6 py-8 mx-auto">
+    <div class="w-full bg-[#171c2d] max-w-md p-8 rounded-lg">
+        
+        <h1 class="text-lg text-center font-bold text-white">
+            Login Page
+        </h1>
+    
+        <form class="space-y-4" method="POST">
+            {% csrf_token %}
+
+            {% for field in form %}
+            <div>
+                <label class="text-sm text-white mb-2">{{ field.label }}</label>
+                {{ field }}
+            </div>
+            {% endfor %}
+
+            <div class="text-center">
+                <button type="submit" class="p-3 text-center text-[#171c2d] rounded-lg bg-[#f9982f]">
+                    Sign Up
+                </button>
+            </div>
+
+            <p class="text-sm font-light text-white">
+                Have an account?
+                <a href="{% url 'login_page' %}" class="text-white hover:text-[#eab56f]">Login here</a>
+            </p>
+
+        </form>
+    </div>
+</div>
+
+{% endblock %}
