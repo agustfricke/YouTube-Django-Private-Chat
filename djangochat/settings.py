@@ -82,6 +82,8 @@ CHANNEL_LAYERS = {
     }
 }
 
+# docker run -p 6379:6379 -d redis:5
+
 
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
