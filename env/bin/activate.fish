@@ -30,7 +30,7 @@ end
 # Unset irrelevant variables.
 deactivate nondestructive
 
-set -gx VIRTUAL_ENV "/home/agust/Django-Chat/env"
+set -gx VIRTUAL_ENV "/home/agust/Projects/SoloDjango/YouTube-Django-Private-Chat/env"
 
 set -gx _OLD_VIRTUAL_PATH $PATH
 set -gx PATH "$VIRTUAL_ENV/bin" $PATH
